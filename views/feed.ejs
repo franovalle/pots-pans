@@ -1,0 +1,55 @@
+<!--Note: Using this repo : https://github.com/dikshapadi/Too-Good-To-Go/blob/main/views/auth/login.ejs as a guide to understand how to setup project-->
+<%- include('partials/header') -%>
+<div class="col-6">
+    <ul class="row list-unstyled">
+    <h1>Items to be claimed:
+    <% for(var i=0; i<pendingDonation.length; i++) {%>
+      <li class="col-6 justify-content-between mt-5">
+        <div>
+        <span>Item:</span>
+        <span class="text-2xl"><%= pendingDonation[i].item %></span>
+        </div>
+        <div>
+        <span>Description:</span>
+        <span class="text-2xl"><%= pendingDonation[i].description %></span>
+        </div>
+        <div>
+        <span>Delivery Time:</span>
+        <span class="text-2xl"><%= pendingDonation[i].deliveryTime %></span>
+        </div>
+      </li>
+        <% } %>
+      </ul>
+
+<div>
+
+<!--Note to self: this part of the post routes
+<%- include('partials/header') -%>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <ul class="row list-unstyled">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <a href="/post/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>">
+            </a>
+          </li>
+        <% } %>
+        </ul>
+    </div>
+  </div>  -->
+
+<!--
+ <div class="col-6">
+        <ul class="row list-unstyled">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <a href="/post/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>">
+            </a>
+          </li>
+        <% } %>
+        </ul>
+
+        so if the feed is where the post are place so i can make a route where both parties see it and maybe add the option for the the hospital to claim and then see it to another page 
+-->

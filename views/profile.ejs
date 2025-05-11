@@ -1,0 +1,44 @@
+<!--Note: Using this repo : https://github.com/dikshapadi/Too-Good-To-Go/blob/main/views/auth/login.ejs as a guide to understand how to setup project-->
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+          <div>
+             <!-- <p><strong>User Name</strong>: <%= user.userName %></p>
+              <p><strong>Email</strong>: <%= user.email %></p>-->
+              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+          </div>
+          <div class="container">
+             <div class="page-header text-center">
+               <p class="text-center text-5xl">Thank you for supporting our frontline workers.</p>
+               <p class="text-right text-s">#itDoesNotHaveToEnd</p>
+             </div>
+          <div class="mt-5">
+            <h2>Add an item:</h2>
+            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="item" class="form-label">Item</label>
+                  <input type="text" class="form-control" id="item" name="item">
+              </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="decription"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="delivery" class="form-label">Delivery Time</label>
+                <input type ="time" id="delivery" name="deliveryTime">
+              </div>
+              <!--<div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>-->
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div>
+      </div>
+
+        
+<%- include('partials/footer') -%>
+
+<!--Restaurant needs the option to edit and delete-->
+<!--i guess whatever is on the ul is what shows up in the feed -->
