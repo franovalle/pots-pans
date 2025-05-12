@@ -7,10 +7,10 @@ const CommentSchema = new mongoose.Schema({ //this is for the accept
     type: String,
     required: true,
   },
-  /*likes: {
+  likes: {
     type: Number,
     required: true,
-  },*/
+  },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",

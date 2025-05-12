@@ -1,0 +1,22 @@
+html, body{
+    font-size: 75%;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    background-color: r;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: black;
+
+}
+
+.circle{
+    width: 100px;
+    height: 100px; 
+    background-color: #dc3545; 
+    display: inline-block;
+    margin: 10px;
+    color: white; 
+}

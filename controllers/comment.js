@@ -1,4 +1,5 @@
 //Note using this repo as a guide: https://github.com/Resilient-Labs/quick-pound-2025a/blob/main/controllers/comments.js
+//this is to claim the donation 
 const Comment = require("../models/Comment");
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
     console.log('we made it')
       await Comment.create({
         commentText: req.body.comment,
-        //likes: 0,
+        likes: 0,
         user: req.user.id,
         post: req.params.rainbowUnicorn
       });
@@ -17,7 +18,7 @@ module.exports = {
       console.log(err);
     }
   },
-  /*likeComment: async (req, res) => {
+  likeComment: async (req, res) => {
     try {
       await Comment.findOneAndUpdate(
         { _id: req.params.id },
@@ -30,7 +31,7 @@ module.exports = {
     } catch (err) {
       console.log(err);
     }
-  },*/
+  },
 //   deletePost: async (req, res) => {
 //     try {
 //       // Find post by id

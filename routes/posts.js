@@ -11,7 +11,7 @@ router.get("/:id", ensureAuth, postsController.getPost);
 
 router.post("/createPost", upload.single("file"), postsController.createPost);//this is when the order form is filed out 
 
-//router.put("/likePost/:id", postsController.likePost);//not necessary 
+router.put("/likePost/:id", postsController.likePost);//not necessary 
 
 router.delete("/deletePost/:id", postsController.deletePost);
 

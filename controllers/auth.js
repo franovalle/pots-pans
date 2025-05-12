@@ -90,7 +90,7 @@ exports.postSignup = (req, res, next) => {
     userName: req.body.userName,
     email: req.body.email,
     password: req.body.password,
-    role: req.body.role // added this to know if rest or hospital 
+    role: req.body.role, // added this to know if rest or hospital 
   });
 
   User.findOne(
@@ -118,7 +118,7 @@ exports.postSignup = (req, res, next) => {
           res.redirect("/profile"); //is where we can restaurants can place order
           }
           else if (user.role === "hospital"){
-            res.redirect("/feed")//because I want the hospital to fall straight onto the feed page 
+            res.redirect("/feed")//because I want the hospital to fall straight onto the feed page, but may need to create page to see claimed items
           }
         });
       });

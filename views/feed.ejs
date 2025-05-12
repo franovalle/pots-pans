@@ -1,21 +1,69 @@
-<!--Note: Using this repo : https://github.com/dikshapadi/Too-Good-To-Go/blob/main/views/auth/login.ejs as a guide to understand how to setup project-->
-<%- include('partials/header') -%>
-<div class="col-6">
-    <ul class="row list-unstyled">
-    <h1>Items to be claimed:
-    <% for(var i=0; i<pendingDonation.length; i++) {%>
-      <li class="col-6 justify-content-between mt-5">
+<!--Note: Using this repo : https://github.com/dikshapadi/Too-Good-To-Go/blob/main/views/auth/login.ejs as a guide to understand how to setup project & using my template from my CRUD version -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pots + pans</title>
+   <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/imgs/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+   <body class="index-page">
+   <header class ="bg-danger text-white py-3 px-4">
+
+    <div class="container d-flex justify-content-between align-items-center">
+          <h1 class="h3 m-0 fw-bold sitename"><a href="/profile">Pots & Pans</a></h1>
+          <p>In 2020, we banged our Pots & Pans. Restaurants sent meals in gratitude. That spirit brought us together — and #itDoesNotHaveToEnd.
+        </div>
+      
+      </header>
+  </body>
+</html>
+<div class="container mt-5">
+   
+    <ul class="list-unstyled">
+    <h1>Items to be claimed:</h1>
+    <% for (var i=0; i<posts.length; i++) {%>
+      <li class="border border-danger">
         <div>
         <span>Item:</span>
-        <span class="text-2xl"><%= pendingDonation[i].item %></span>
+        <span class="text-2xl"><%= posts[i].item %></span>
         </div>
         <div>
         <span>Description:</span>
-        <span class="text-2xl"><%= pendingDonation[i].description %></span>
+        <span class="text-2xl"><%= posts[i].description %></span>
         </div>
         <div>
         <span>Delivery Time:</span>
-        <span class="text-2xl"><%= pendingDonation[i].deliveryTime %></span>
+        <span class="text-2xl"><%= posts[i].deliveryTime %></span>
+        </div>
+        <div>
+          <a href="/post/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>">
+            </a>
         </div>
       </li>
         <% } %>
@@ -23,33 +71,4 @@
 
 <div>
 
-<!--Note to self: this part of the post routes
-<%- include('partials/header') -%>
-  <div class="container">
-    <div class="row justify-content-center mt-5">
-      <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-    </div>
-  </div>  -->
-
-<!--
- <div class="col-6">
-        <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-
-        so if the feed is where the post are place so i can make a route where both parties see it and maybe add the option for the the hospital to claim and then see it to another page 
--->
+<%- include('partials/footer') -%>

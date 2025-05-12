@@ -13,7 +13,7 @@ router.post("/createComment/:id", commentsController.createComment);// the goal 
 router.put("/acceptComment/:id", commentsController.likeComment);//and accept claim 
 
 
-//router.put("/likeComment/:id", commentsController.likeComment);//and accept claim 
+router.put("/likeComment/:id", commentsController.likeComment);//and accept claim 
 
 //router.delete("/deletePost/:id", postsController.deletePost);
 

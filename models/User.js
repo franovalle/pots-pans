@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
   role: {type: String, enum:['hospital', 'restaurant'], require: true } //enum: lets us define name constants 
 });
 
-//role ? check for role , a string 
+
 // Password hash middleware.
 
 UserSchema.pre("save", function save(next) {
