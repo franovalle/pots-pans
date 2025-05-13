@@ -6,6 +6,10 @@ const mongoose = require("mongoose");
 
 
 const PostSchema = new mongoose.Schema({
+  org: {
+    type: String,
+    require: true,
+  },
   item: {
     type: String,
     required: true,
@@ -14,16 +18,16 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  cloudinaryId: {
+    note: {
     type: String,
     require: true,
   },
-  deliveryTime: {
+  deliveryDate: {
     type: String,
     required: true,
   },
-  likes: {
-    type: Number,
+  deliveryTime: {
+    type: String,
     required: true,
   },
   user: {

@@ -18,26 +18,35 @@
           <div class="mt-5">
             <h2>Donate</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+                <div class="mb-3">
+                  <label for="item" class="form-label h5">Hospital Name</label>
+                  <input type="text" class="form-control" id="item" name="org">
+              </div>
               <div class="mb-3">
-                  <label for="item" class="form-label">Item:</label>
+                  <label for="item" class="form-label h5">Item:</label>
                   <input type="text" class="form-control" id="item" name="item">
               </div>
               <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
+                <label for="description" class="form-label h5">Item Description:</label>
                 <textarea class="form-control" id="description" name="decription"></textarea>
               </div>
               <div class="mb-3">
-                <label for="delivery" class="form-label">Delivery Time</label>
-                <input type ="datetime-local" id="delivery" name="deliveryTime">
+                <label for="description" class="form-label h5">Note:</label>
+                <textarea class="form-control" id="description" name="note"></textarea>
               </div>
               <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
+                <label for="delivery" class="form-label h5">Delivery Date:</label>
+                <input type ="date" id="delivery" name="deliveryDate">
+              </div>
+                <div class="mb-3">
+                <label for="delivery" class="form-label h5">Delivery Time:</label>
+                <input type ="time" id="delivery" name="deliveryTime">
               </div>
               <button type="submit" class="btn btn-danger d-block mx-auto" value="Upload">Donate</button>
             </form>
           </div>
       </div>
+     
      
          <div class="col-6 mt-5">
       <!--<a class="btn btn-danger" href="/profile">Return to Profile</a>-->
@@ -47,4 +56,3 @@
         
 <%- include('partials/footer') -%>
 
-<!--Note to self: To do: let me know which company is donating -->
