@@ -1,52 +1,88 @@
 <%- include('partials/header') -%>
 <!--Note to self: This is the main page, use this as inspiration for style https://themewagon.com/themes/yummy-red/-->
   <!-- Hero Section -->
-  <!--<header class ="bg-danger text-white py-3 px-4">
-
-    <div class="container d-flex justify-content-between align-items-center">
-          <h1 class="h3 m-0 fw-bold">Pots & Pans</h1>
-          <p>In 2020, we banged our Pots & Pans. Restaurants sent meals in gratitude. That spirit brought us together — and #itDoesNotHaveToEnd.
-        </div>
-      
-      </header>
-
-  </section>-- /Hero Section, note to self, this is good for me  --> 
-<br></br>
-<div class = "container">
-  <div class = "d-flex justify-content-center">
-   
-    <p class = "h1">About Us</p>
-   </div>
-   <div class = "d-flex justify-content-center">
-    <p class="h5 mb-2">Born from the generosity shown during the pandemic, Pots and Pans makes it easy for restaurants to give back. With just a tap, they can post what they’re donating and when they’ll deliver—no calls needed. Hospitals and first responders admins log in, and see what's headed your way.
-
-<strong>Simple. Direct. Gratitude.</strong></p>
-   </div>
-
- <!-- <h1>How it works:</h1>-->
-   <!--<div class = "d-flex justify-content-center">
-  <div class="embed-responsive embed-responsive-16by9 text-align-center">
-  <iframe src="https://share.tmz.com/watch/040420-nyc-pans-4763836-0-m9k80nso/" width="560" height="395" frameBorder="0" allowFullScreen></iframe>
-</div>
-</div>-->
-<br></br>
-
-  <div class = "d-flex justify-content-center">
-    <div class = "circle rounded-circle mx-5 d-flex justify-content-center align-items-center h6">1. Sign Up</div>
-     <div class = "circle rounded-circle mx-5 d-flex justify-content-center align-items-center h6">2. Donate / View</div>
-      <div class = "circle rounded-circle mx-5 d-flex justify-content-center align-items-center h6">3.Enjoy gratitude!</div>
-
+<!-- Hero Section -->
+<section class="min-vh-100 d-flex align-items-center justify-content-center text-center bg-light">
+  <div class="container">
+    <h1 class="display-1 fw-bold mb-4 text-danger">Pots & Pans</h1>
+    <p class="lead fs-4 mb-4">
+      In 2020, we banged our Pots & Pans. Restaurants sent meals in gratitude.That spirit brought us together —
+      <strong class="fw-bold">#itDoesNotHaveToEnd</strong>.
+       <br><strong>Simple. Direct. Gratitude.</strong>
+    </p>
+  <!-- Watch Video Button -->
+  <div class="text-center mt-5">
+    <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#videoContainer">
+      <i class="fas fa-play"></i> Watch Video
+    </button>
   </div>
-</div>
 
-
-
-<main class="container">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-danger">Log In</a>
-        <a href="/signup" class="col-3 btn btn-danger"> Create an Account</a>
+  <!-- Video Embed (Hidden initially) -->
+  <div id="videoContainer" class="collapse text-center mt-4">
+    <div class="ratio ratio-16x9" style="max-width: 640px; margin: auto;">
+      <iframe
+        src="https://www.youtube.com/embed/YHf-RtJtSbA?autoplay=1&rel=0&modestbranding=1&controls=1"
+        title="Watch Video"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
     </div>
-</main>
+  </div>
+
     
+
+    <!-- Buttons Row -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-sm-6 col-md-3 mb-2">
+        <a href="/login" class="btn btn-danger btn-lg w-100">Log In</a>
+      </div>
+      <div class="col-sm-6 col-md-3 mb-2">
+        <a href="/signup" class="btn btn-outline-danger btn-lg w-100">Create an Account</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section 
+<section class="py-5 text-center bg-white">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-danger">About Us</h2>
+    <p class="fs-5 text-muted mx-auto" style="max-width: 800px;">
+      Born from the generosity shown during the pandemic, Pots and Pans makes it easy for restaurants to give back.
+      With just a tap, they can post what they’re donating and when they’ll deliver — no calls needed.
+      Hospitals and first responder admins log in and see what's headed their way.
+      <br><strong>Simple. Direct. Gratitude.</strong>
+    </p>
+  </div>
+</section>
+
+ How It Works Section 
+<section class="bg-light py-5 text-center">
+  <div class="container">
+    <h3 class="fw-bold mb-5">How It Works</h3>
+    <div class="row justify-content-center g-4">
+      <div class="col-6 col-md-3">
+        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 120px; height: 120px;">
+          <span class="fw-bold">1. Sign Up</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 120px; height: 120px;">
+          <span class="fw-bold">2. Donate / View</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 120px; height: 120px;">
+          <span class="fw-bold">3. Enjoy!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+
+
+
 
 <%- include('partials/footer') -%>

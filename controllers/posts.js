@@ -41,7 +41,7 @@ module.exports = {
       await Post.create({
         org: req.body.org,
         item: req.body.item,
-        description: req.body.item,
+        description: req.body.description,
         note: req.body.note,
         deliveryDate: req.body.deliveryDate,
         deliveryTime: req.body.deliveryTime,

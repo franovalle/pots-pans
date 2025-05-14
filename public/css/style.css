@@ -1,8 +1,10 @@
 html, body{
-    font-size: 75%;
-    font-family: Nunito, Arial, Helvetica, sans-serif;
-    background-color: r;
+  font-size: 75%;
+  font-family:Nunito, Arial, Helvetica, sans-serif;
+   margin: 0;
+   padding: 0;
 }
+
 a{
     text-decoration: none;
     color: white;
@@ -20,3 +22,55 @@ a:hover{
     margin: 10px;
     color: white; 
 }
+
+/*Header*/
+
+.sitename {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2rem; 
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px; 
+  text-align: center; 
+  margin: 0;
+  padding: 0;
+}
+
+.sitename a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+
+.hashtag {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  position: absolute; 
+  top: 10px;
+  right: 20px;
+  margin: 0;
+}
+
+
+header p {
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+header {
+  background-color: #e63946; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+

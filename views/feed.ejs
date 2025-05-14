@@ -1,6 +1,74 @@
 <!--Note: Using this repo : https://github.com/dikshapadi/Too-Good-To-Go/blob/main/views/auth/login.ejs as a guide to understand how to setup project & using my template from my CRUD version -->
 <%- include('partials/header') -%>
+
 <div class="container mt-5">
+  <!-- Logout Button -->
+  <a href="/logout" class="btn btn-danger float-end" role="button" aria-label="Logout">Logout</a>
+
+  <!-- Main Heading -->
+  <h2 class="display-6">POTS & PANS CHEER COMING YOUR WAY!</h2>
+
+  <!-- List of posts -->
+  <ul class="list-unstyled">
+    <% for (var i=0; i<posts.length; i++) { %>
+      <li class="border border-danger mb-4 p-4 rounded">
+        <!-- View Post Link -->
+        <div>
+          <a href="/post/<%= posts[i]._id%>" class="text-danger h5" role="link" aria-label="View post details">View</a>
+        </div>
+
+        <!-- Hospital Name -->
+        <div class="mt-2">
+          <strong class="fs-5 fw-semibold">Hospital Name:</strong>
+          <span class="fs-5"><%= posts[i].org %></span>
+        </div>
+
+        <!-- Item -->
+        <div class="mt-2">
+          <strong class="fs-5 fw-semibold">Item:</strong>
+          <span class="fs-5"><%= posts[i].item %></span>
+        </div>
+
+        <!-- Description -->
+        <div class="mt-2">
+          <strong class="fs-5 fw-semibold">Description:</strong>
+          <span class="fs-5"><%= posts[i].description %></span>
+        </div>
+
+        <!-- Note -->
+        <div class="mt-2">
+          <strong class="fs-5 fw-semibold">Note:</strong>
+          <span class="fs-5"><%= posts[i].note %></span>
+        </div>
+
+        <!-- Delivery Date -->
+        <div class="mt-2">
+          <strong class="fs-5 fw-semibold">Delivery Date:</strong>
+          <span class="fs-5"><%= posts[i].deliveryDate %></span>
+        </div>
+
+        <!-- Delivery Time -->
+        <div class="mt-2">
+          <strong class="fs-5 fw-semibold">Delivery Time:</strong>
+          <span class="fs-5"><%= posts[i].deliveryTime %></span>
+        </div>
+      </li>
+    <% } %>
+  </ul>
+
+  <!-- Optional Profile or Donate Button -->
+  <div class="mt-5">
+    <div class="col-12">
+      <!-- <a class="btn btn-danger" href="/profile">Return to Profile</a> -->
+      <!-- <a class="btn btn-danger" href="/profile">Donate</a> -->
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--<div class="container mt-5">
   <a href="/logout" class="btn btn-danger float-end">Logout</a>
     <ul class="list-unstyled">
     <h1>POTS & PANS CHEER COMING YOUR WAY!</h1>
@@ -39,8 +107,8 @@
 
 <div>
       <div class="col-6 mt-5">
-      <!--<a class="btn btn-danger" href="/profile">Return to Profile</a>-->
-    <!--<a class="btn btn-danger" href="/profile">Donate</a>, I do not want hospital to go to donate page-->
-    </div>
+    <a class="btn btn-danger" href="/profile">Return to Profile</a>-->
+    <!--<a class="btn btn-danger" href="/profile">Donate</a>, I do not want hospital to go to donate page
+    </div>-->
 
 <%- include('partials/footer') -%>

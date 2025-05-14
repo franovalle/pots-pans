@@ -19,3 +19,4 @@ router.post("/signup", authController.postSignup);//both rest and hospital can s
 //i think i need to make one more route-->where it brings the hospital to see claimed
 //router.get("/profileOrg", ensureAuth, postsController.getProfileOrg)
 module.exports = router;
+

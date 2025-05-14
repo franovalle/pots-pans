@@ -2,13 +2,79 @@
 <!--Note to self: Using this repo as a guide: https://github.com/Resilient-Labs/quick-pound-2025a-->
 
 <%- include('partials/header') -%>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 p-4 border border-danger rounded bg-white">
+      
+      <!-- Optional: Display username -->
+      <!-- <h2 class="fs-5 fw-bold"><%= user.userName %></h2> -->
+
+      <div class="mb-3">
+        <strong class="fs-5 fw-semibold">Hospital Name:</strong> 
+        <span class="fs-5"><%= post.org %></span>
+      </div>
+      
+      <div class="mb-3">
+        <strong class="fs-5 fw-semibold">Item:</strong> 
+        <span class="fs-5"><%= post.item %></span>
+      </div>
+      
+      <div class="mb-3">
+        <strong class="fs-5 fw-semibold">Description:</strong> 
+        <span class="fs-5"><%= post.description %></span>
+      </div>
+      
+      <div class="mb-3">
+        <strong class="fs-5 fw-semibold">Note:</strong> 
+        <span class="fs-5"><%= post.note %></span>
+      </div>
+      
+      <div class="mb-3">
+        <strong class="fs-5 fw-semibold">Delivery Date:</strong> 
+        <span class="fs-5"><%= post.deliveryDate %></span>
+      </div>
+      
+      <div class="mb-3">
+        <strong class="fs-5 fw-semibold">Delivery Time:</strong> 
+        <span class="fs-5"><%= post.deliveryTime %></span>
+      </div>
+
+      <!-- Optional image and likes section -->
+      <!-- 
+      <img class="img-fluid my-3" src="<%= post.image %>" alt="Post image" />
+      <div class="d-flex justify-content-between align-items-center">
+        <form action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
+          <button class="btn btn-outline-primary fa fa-heart" type="submit" aria-label="Like this post"></button>
+        </form>
+        <h5>Likes: <%= post.likes %></h5>
+      </div>
+      -->
+
+      <!-- Only display the delete button if the user is authorized -->
+      <% if (post.user == user.id) { %>
+        <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="mt-3" role="form">
+          <button class="btn btn-danger" aria-label="Delete this post">
+            <i class="fa fa-trash"></i> Delete Post
+          </button>
+        </form>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+
  
-  <div class="container">
+ <!-- 
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 p-4 border border-danger rounded bg-white">
+
+ <div class="container">
     <div class="row justify-content-center mt-5">
       <div class="border border-danger">
-         <!--<span class ="h2">
+         <span class ="h2">
     <%= user.userName %>
-  </span>-->
+  </span>
        <span class = "h3">Hospital Name:</span>
         <span class="h3"> <%= post.org %></span>
         <br></br>
@@ -26,13 +92,13 @@
          <br></br>
          <span class = "h3">Delivery Time:</span>
         <span class="h3"> <%= post.deliveryTime %></span>
-        <!--<img class="img-fluid" src="<%= post.image%>" />
+        <img class="img-fluid" src="<%= post.image%>" />
         <div class="row justify-content-between">
           <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
             <button class="btn btn-primary fa fa-heart" type="submit"></button>
           </form>
           <h3 class="col-3">Likes: <%= post.likes %>
-          </h3>-->
+          </h3>
          <%if(post.user == user.id){ %>
         <form
           action="/post/deletePost/<%= post.id %>?_method=DELETE"
@@ -46,7 +112,7 @@
             
             
         </div>
-      </div>
+      </div>-->
     
     
   
